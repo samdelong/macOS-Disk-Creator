@@ -716,6 +716,17 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OgY-M0-xml">
+                                <rect key="frame" x="122" y="13" width="141" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Check for Drives" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MOg-zg-kjD">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="findDisks:" target="XfG-lQ-9wD" id="fga-RM-7Iq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="TXV-Ok-Ij6" firstAttribute="trailing" secondItem="3Tn-r8-dru" secondAttribute="trailing" id="9rF-z1-kIV"/>
@@ -732,6 +743,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="detectDrives" destination="OgY-M0-xml" id="aNH-SB-uYF"/>
                         <outlet property="diskChoose" destination="TXV-Ok-Ij6" id="teI-Qq-Ra2"/>
                         <outlet property="sierraButton" destination="3Tn-r8-dru" id="WLO-9q-9UR"/>
                     </connections>

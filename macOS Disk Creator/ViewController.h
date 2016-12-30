@@ -16,5 +16,7 @@ static NSArray *_diskVar = nil;
 
 @property (strong, nonatomic) IBOutlet NSPopUpButton *diskChoose;
 
+@property (strong, nonatomic) IBOutlet NSButton *detectDrives;
+
 @end
 

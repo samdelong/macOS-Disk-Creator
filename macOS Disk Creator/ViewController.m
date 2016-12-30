@@ -27,6 +27,22 @@
     
 
 }
+- (IBAction)findDisks:(id)sender{
+    [self.diskChoose removeAllItems];
+    NSArray *diskManager = [[NSFileManager defaultManager] mountedVolumeURLsIncludingResourceValuesForKeys:@[NSURLVolumeNameKey] options:0];
+    for (NSURL *url in diskManager) {
+        NSLog(@"Volume mounted at: %@", [url path]);
+        if ([[url path] rangeOfString:@"/Volumes"].location != NSNotFound){
+            
+            [self.diskChoose addItemWithTitle:[[url path] substringFromIndex:9]];
+            
+        }
+        
+        
+    }
+
+    
+}
 
 
 - (void)setRepresentedObject:(id)representedObject {
