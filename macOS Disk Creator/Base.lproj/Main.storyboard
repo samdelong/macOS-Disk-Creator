@@ -679,19 +679,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="385" height="361"/>
+                        <rect key="frame" x="0.0" y="0.0" width="385" height="362"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUk-9s-q8f">
-                                <rect key="frame" x="18" y="275" width="349" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Bootable Disk Creator" id="vAG-f6-M8o">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Tn-r8-dru">
-                                <rect key="frame" x="108" y="63" width="168" height="32"/>
+                                <rect key="frame" x="108" y="64" width="168" height="32"/>
                                 <buttonCell key="cell" type="push" title="Create Bootable Disk" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FVf-g7-EJz">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -701,7 +693,7 @@
                                 </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TXV-Ok-Ij6">
-                                <rect key="frame" x="112" y="150" width="161" height="26"/>
+                                <rect key="frame" x="112" y="151" width="161" height="26"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="Z2Q-k7-QgV">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -709,7 +701,7 @@
                                 </popUpButtonCell>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAX-P8-ij6">
-                                <rect key="frame" x="18" y="186" width="349" height="17"/>
+                                <rect key="frame" x="18" y="187" width="349" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Disk" id="3ib-cU-Ged">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" red="0.21083630181347146" green="0.21083630181347146" blue="0.21083630181347146" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -717,7 +709,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OgY-M0-xml">
-                                <rect key="frame" x="122" y="13" width="141" height="32"/>
+                                <rect key="frame" x="122" y="14" width="141" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Check for Drives" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MOg-zg-kjD">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -727,6 +719,29 @@
                                     <action selector="findDisks:" target="XfG-lQ-9wD" id="fga-RM-7Iq"/>
                                 </connections>
                             </button>
+                            <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="8B3-93-cZH">
+                                <rect key="frame" x="32" y="-1" width="333" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </progressIndicator>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwk-vj-22l">
+                                <rect key="frame" x="290" y="262" width="275" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Free Space NSLOG" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pl3-rO-8QW">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="gay:" target="XfG-lQ-9wD" id="IBr-aK-yZ7"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUk-9s-q8f">
+                                <rect key="frame" x="18" y="286" width="349" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Bootable Disk Creator" id="vAG-f6-M8o">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="TXV-Ok-Ij6" firstAttribute="trailing" secondItem="3Tn-r8-dru" secondAttribute="trailing" id="9rF-z1-kIV"/>
@@ -745,12 +760,14 @@
                     <connections>
                         <outlet property="detectDrives" destination="OgY-M0-xml" id="aNH-SB-uYF"/>
                         <outlet property="diskChoose" destination="TXV-Ok-Ij6" id="teI-Qq-Ra2"/>
+                        <outlet property="progress" destination="8B3-93-cZH" id="v9Q-TB-ejP"/>
                         <outlet property="sierraButton" destination="3Tn-r8-dru" id="WLO-9q-9UR"/>
+                        <outlet property="test" destination="hwk-vj-22l" id="lxq-9g-tdc"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122.5" y="700.5"/>
+            <point key="canvasLocation" x="122.5" y="701"/>
         </scene>
     </scenes>
 </document>

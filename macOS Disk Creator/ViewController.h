@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-static NSArray *_diskVar = nil;
+static NSString *_diskpath = nil;
 
 @interface ViewController : NSViewController
 
@@ -17,6 +17,12 @@ static NSArray *_diskVar = nil;
 @property (strong, nonatomic) IBOutlet NSPopUpButton *diskChoose;
 
 @property (strong, nonatomic) IBOutlet NSButton *detectDrives;
+
+@property (strong, nonatomic) IBOutlet NSProgressIndicator *progress;
+
+@property (strong, nonatomic) IBOutlet NSButton *test;
+
+
 
 @end
 
