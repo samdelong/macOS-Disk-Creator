@@ -104,20 +104,6 @@
     
     
 }
-- (IBAction)gay:(id)sender{
-    NSError *error = nil;
-    NSDictionary *attr = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[NSString stringWithFormat:@"//volumes/Install\ macOS\ Sierra"] error:&error];
-    
-    double diskSize = [[attr valueForKey:@"NSFileSystemSize"] doubleValue];
-    double diskFreeSpace = [[attr valueForKey:@"NSFileSystemFreeSize"] doubleValue];
-    double usedSpace = diskSize - diskFreeSpace;
-    NSLog(@"%f",usedSpace);
-    
-}
-
-
-
-
 
 
 
